@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画分享网站</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>漫画分享网站</h1>
+            <p>分享与阅读您喜爱的漫画</p>
+        </header>
+        
+        <main>
+            <div class="options">
+                <div class="option-card" id="share-option">
+                    <div class="icon">📤</div>
+                    <h2>分享漫画</h2>
+                    <p>上传您的漫画到书柜</p>
+                    <button id="start-share-btn" class="primary-btn">开始分享</button>
+                </div>
+                
+                <div class="option-card" id="read-option">
+                    <div class="icon">📚</div>
+                    <h2>看漫画</h2>
+                    <p>阅读书柜中的漫画</p>
+                    <button id="start-read-btn" class="primary-btn">开始阅读</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 漫画分享网站 | 使用 GoFile.io 和 Ably 技术</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('start-share-btn').addEventListener('click', () => {
+                window.location.href = 'share.html';
+            });
+            
+            document.getElementById('start-read-btn').addEventListener('click', () => {
+                window.location.href = 'read.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分享漫画 - 漫画分享网站</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📤</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>分享漫画</h1>
+            <p>选择书柜并上传您的漫画</p>
+        </header>
+        
+        <main>
+            <div class="bookcase-selection">
+                <h2>1. 选择一个书柜</h2>
+                <div class="bookcase-grid" id="bookcase-grid"></div>
+            </div>
+            
+            <div class="upload-section" id="upload-section" style="display: none;">
+                <h2>2. 上传漫画</h2>
+                <p>当前选中的书柜: <strong id="selected-bookcase-display">无</strong></p>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📁</div>
+                    <p>拖放文件到此处或点击选择</p>
+                    <p class="file-types">支持 PDF 和 ZIP 格式</p>
+                    <input type="file" id="comic-file" accept=".pdf,.zip" style="display: none;">
+                </div>
+                
+                <div class="file-info" id="file-info" style="display: none;">
+                    <h3>文件信息</h3>
+                    <p id="file-name"></p>
+                    <p id="file-size"></p>
+                    <div id="file-preview"></div>
+                    <button id="upload-btn" class="primary-btn">上传漫画</button>
+                </div>
+                
+                <div class="progress-container" id="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress" id="upload-progress"></div>
+                    </div>
+                    <p id="progress-text">上传中: 0%</p>
+                </div>
+                
+                <div class="success-message" id="success-message" style="display: none;">
+                    <div class="success-icon">✅</div>
+                    <h3>上传成功！</h3>
+                    <p>您的漫画已上传到书柜 <span id="selected-bookcase" class="highlight"></span></p>
+                    <p>新书柜密码: <strong id="new-password" class="password-display"></strong></p>
+                    <div class="share-actions">
+                        <button id="copy-password" class="secondary-btn">复制密码</button>
+                        <button id="back-btn" class="secondary-btn">返回首页</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 漫画分享网站 | 使用 GoFile.io 和 Ably 技术</p>
+        </footer>
+    </div>
+    
+    <script src="assets/js/gofile.js"></script>
+    <script src="assets/js/ably.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
